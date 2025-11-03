@@ -17,7 +17,7 @@ namespace Transformation.Text
             // Simplest usage: single example of a single string input:
             LearnFormatName();
             // Learning a program using multiple examples:
-            LearnNormalizePhoneNumber();
+            /*LearnNormalizePhoneNumber();
             // Learning a program that takes multiple strings (columns) as input:
             LearnMergeNames();
             // Learning top-k ranked programs instead of just the single best one:
@@ -27,7 +27,7 @@ namespace Transformation.Text
             LearnNormalizeDate();
             // Convert program to string and back:
             SerializeProgram();
-
+*/
             Console.WriteLine("\n\nDone.");
         }
 
