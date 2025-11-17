@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SemanticProse", "SemanticProse\SemanticProse.csproj", "{57CD6B57-B4F0-49C9-8DC2-10D0AFF572D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcatExample", "ConcatExample\ConcatExample.csproj", "{684F62CC-65C2-4D9E-B950-3B1E05E9EEC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{57CD6B57-B4F0-49C9-8DC2-10D0AFF572D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57CD6B57-B4F0-49C9-8DC2-10D0AFF572D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57CD6B57-B4F0-49C9-8DC2-10D0AFF572D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{684F62CC-65C2-4D9E-B950-3B1E05E9EEC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{684F62CC-65C2-4D9E-B950-3B1E05E9EEC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{684F62CC-65C2-4D9E-B950-3B1E05E9EEC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{684F62CC-65C2-4D9E-B950-3B1E05E9EEC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
