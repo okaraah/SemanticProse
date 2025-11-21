@@ -1,0 +1,197 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="DemoV2.MainWindow"
+        Width="1440" Height="855"
+        FontFamily="Inter"
+        Background="#3A3A3A"
+        Title="FlashGPT">
+    
+    <Window.Styles>
+        <!-- button centering -->
+        <Style Selector="Button">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        
+        <!-- completely borderless textbox used in the blue cards -->
+        <Style Selector="TextBox.borderless">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="0"/>
+            
+            <!-- override the default template so no inner border/background is drawn -->
+            <Setter Property="Template">
+                <ControlTemplate TargetType="TextBox">
+                    <ScrollViewer x:Name="PART_ScrollViewer"
+                                  Background="Transparent"
+                                  Padding="{TemplateBinding Padding}">
+                        <TextPresenter x:Name="PART_TextPresenter"
+                                       Text="{TemplateBinding Text}"
+                                       CaretIndex="{TemplateBinding CaretIndex}"
+                                       SelectionStart="{TemplateBinding SelectionStart}"
+                                       SelectionEnd="{TemplateBinding SelectionEnd}"
+                                       TextWrapping="{TemplateBinding TextWrapping}"
+                                       VerticalAlignment="Top"
+                                       HorizontalAlignment="Left"/>
+                    </ScrollViewer>
+                </ControlTemplate>
+            </Setter>
+        </Style>
+    </Window.Styles>
+    
+    <!-- main app -->
+    <Border Margin="16"
+            Background="White"
+            CornerRadius="24">
+        <!-- two screens stacked on top of each other, toggle IsVisible for now-->
+        <Grid>
+            <!-- ========== start screen ========== -->
+            <Grid x:Name="StartScreen"
+                  RowDefinitions="*,*,*">
+
+                <!-- center content -->
+                <StackPanel Grid.Row="1"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Spacing="16">
+                    <TextBlock Text="FlashGPT"
+                               FontSize="80"
+                               FontWeight="Bold"
+                               Foreground="#181818"
+                               HorizontalAlignment="Center"/>
+
+                    <TextBlock Text="by Ismail, Oguz, Thao Vy, Thuy Tien"
+                               FontSize="18"
+                               Foreground="#181818"
+                               HorizontalAlignment="Center"/>
+
+                    <Button x:Name="StartDemoButton"
+                            Content="start demo"
+                            Width="200" Height="50"
+                            Background="#DCDCDC"
+                            Foreground="#666666"
+                            BorderThickness="0"
+                            CornerRadius="20"
+                            FontSize="16"
+                            HorizontalAlignment="Center"
+                            Margin="0,40,0,0"/>
+                </StackPanel>
+            </Grid>
+
+            <!-- ========== learning examples screen ========== -->
+            <Grid x:Name="ExampleScreen"
+                  IsVisible="False"
+                  RowDefinitions="Auto,Auto,Auto"
+                  Margin="80,100, 80, 20">
+
+                <!-- header text -->
+                <TextBlock Grid.Row="0"
+                           Text="Please provide at least one transformation example using the following format"
+                           FontSize="22"
+                           FontWeight="Bold"
+                           Foreground="#181818"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,40"/>
+
+                <!-- main content -->
+                <StackPanel Grid.Row="1"
+                            Spacing="16"
+                            HorizontalAlignment="Center">
+
+                    <!-- format  -->
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                Spacing="32">
+                        <!-- left labels -->
+                        <StackPanel Spacing="4"
+                                    HorizontalAlignment="Center">
+                            <TextBlock Text="String"
+                                       FontSize="20"
+                                       Foreground="#181818"
+                                       HorizontalAlignment="Center"/>
+                            <TextBlock Text="Max Mustermann"
+                                       FontSize="20"
+                                       Foreground="#999999"
+                                       HorizontalAlignment="Center"/>
+                        </StackPanel>
+                        
+                        <!-- arrows -->
+                        <StackPanel Spacing="4"
+                                    HorizontalAlignment="Center">
+                            <TextBlock Text="→"
+                                       FontSize="20"
+                                       Foreground="#181818"
+                                       HorizontalAlignment="Center"/>
+                            <TextBlock Text="→"
+                                       FontSize="20"
+                                       Foreground="#999999"
+                                       HorizontalAlignment="Center"/>
+                        </StackPanel>
+
+                        <!-- right labels -->
+                        <StackPanel Spacing="4"
+                                    HorizontalAlignment="Center">
+                            <TextBlock Text="TransformedString"
+                                       FontSize="20"
+                                       Foreground="#181818"
+                                       HorizontalAlignment="Center"/>
+                            <TextBlock Text="M.M."
+                                       FontSize="20"
+                                       Foreground="#999999"
+                                       HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <!-- input boxes row -->
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                Spacing="4">
+
+                        <!-- left input -->
+                        <Border Background="#DEE6F5"
+                                CornerRadius="20"
+                                Width="400" Height="150"
+                                Padding="16">
+                            <TextBox x:Name="InputBefore"
+                                     Classes="borderless"
+                                     TextWrapping="Wrap"
+                                     FontSize="20"/>
+                        </Border>
+                        
+                        <!-- arrow -->
+                        <TextBlock Text="→"
+                                   FontSize="20"
+                                   Foreground="#999999"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+
+                        <!-- right input -->
+                        <Border Background="#DEE6F5"
+                                CornerRadius="20"
+                                Width="400" Height="150"
+                                Padding="16">
+                            <TextBox x:Name="InputAfter"
+                                     Classes="borderless"
+                                     TextWrapping="Wrap"
+                                     FontSize="20"/>
+                        </Border>
+                    </StackPanel>
+                </StackPanel>
+
+                <!-- submit button -->
+                <Button x:Name="SubmitExampleButton"
+                        Grid.Row="2"
+                        Content="submit"
+                        Width="200" Height="50"
+                        Margin="0,32,0,0"
+                        HorizontalAlignment="Center"
+                        Background="#DCDCDC"
+                        Foreground="#666666"
+                        BorderThickness="0"
+                        CornerRadius="20"
+                        FontSize="16"/>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>
