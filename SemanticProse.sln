@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SemanticProse", "SemanticProse\SemanticProse.csproj", "{57CD6B57-B4F0-49C9-8DC2-10D0AFF572D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcatExample", "ConcatExample\ConcatExample.csproj", "{684F62CC-65C2-4D9E-B950-3B1E05E9EEC5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SemMapExample", "SemMapExample\SemMapExample.csproj", "{684F62CC-65C2-4D9E-B950-3B1E05E9EEC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

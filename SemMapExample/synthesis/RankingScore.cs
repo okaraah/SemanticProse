@@ -1,8 +1,9 @@
-﻿using Microsoft.ProgramSynthesis;
+﻿using System;
+using Microsoft.ProgramSynthesis;
 using Microsoft.ProgramSynthesis.AST;
 using Microsoft.ProgramSynthesis.Features;
 
-namespace ConcatExample
+namespace SemMapExample
 {
     public class RankingScore : Feature<double>
     {
@@ -15,14 +16,14 @@ namespace ConcatExample
             return 0;
         }
 
-        [FeatureCalculator(nameof(Semantics.Concat))]
-        public static double Concat(double v, double k)
+        [FeatureCalculator(nameof(Semantics.SemMap))]
+        public static double SemMap(double v, double k)
         {
             return 1;
         }
 
-        [FeatureCalculator("s", Method = CalculationMethod.FromLiteral)]
-        public static double K(string s)
+        [FeatureCalculator("Q", Method = CalculationMethod.FromLiteral)]
+        public static double K(Tuple<string,string>[] Q)
         {
             return 0;
         }

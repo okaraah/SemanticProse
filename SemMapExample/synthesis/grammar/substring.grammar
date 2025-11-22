@@ -1,0 +1,13 @@
+﻿using semantics SemMapExample.Semantics;
+using learners SemMapExample.WitnessFunctions;
+
+language flushGPT;
+
+@complete feature double Score = SemMapExample.RankingScore;
+
+@input string v;
+
+@start string program := SemMap(v, Q);
+
+Tuple<string, string>[] Q;
+
