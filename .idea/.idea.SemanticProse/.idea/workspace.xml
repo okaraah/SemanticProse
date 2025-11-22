@@ -9,15 +9,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76a8bda6-94c0-4e38-8976-45a9c6b6736c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/SemMapExample/SemMapExample.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SemMapExample/synthesis/Semantics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConcatExample/ConcatExample.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConcatExample/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SemMapExample/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConcatExample/synthesis/RankingScore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SemMapExample/synthesis/RankingScore.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConcatExample/synthesis/Semantics.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConcatExample/synthesis/WitnessFunctions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SemMapExample/synthesis/WitnessFunctions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConcatExample/synthesis/grammar/substring.grammar" beforeDir="false" afterPath="$PROJECT_DIR$/SemMapExample/synthesis/grammar/substring.grammar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SemanticProse.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SemanticProse.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SemanticProse/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SemanticProse/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemMapExample/synthesis/RankingScore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SemMapExample/synthesis/RankingScore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemMapExample/synthesis/Semantics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SemMapExample/synthesis/Semantics.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemMapExample/synthesis/WitnessFunctions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SemMapExample/synthesis/WitnessFunctions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemMapExample/synthesis/grammar/substring.grammar" beforeDir="false" afterPath="$PROJECT_DIR$/SemMapExample/synthesis/grammar/substring.grammar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +54,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     ".NET Project.ConcatExample.executor": "Debug",
-    ".NET Project.SemMapExample.executor": "Debug",
+    ".NET Project.SemMapExample.executor": "Run",
     ".NET Project.SemanticProse.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -79,10 +75,8 @@
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SemMapExample/bin/Debug/net9.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
-      <option name="PTY_MODE" value="Auto" />
       <option name="MIXED_MODE_DEBUG" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
@@ -102,10 +96,8 @@
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
-      <option name="PTY_MODE" value="Auto" />
       <option name="MIXED_MODE_DEBUG" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
@@ -136,6 +128,7 @@
       <workItem from="1763402386113" duration="3864000" />
       <workItem from="1763491502427" duration="7680000" />
       <workItem from="1763816608255" duration="8064000" />
+      <workItem from="1763825909762" duration="3541000" />
     </task>
     <servers />
   </component>
@@ -162,19 +155,6 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SemMapExample/synthesis/WitnessFunctions.cs</url>
-          <line>35</line>
-          <properties documentPath="C:\Users\thovu\RiderProjects\SemanticProse\SemMapExample\synthesis\WitnessFunctions.cs" containingFunctionPresentation="Method 'WitnessSemMap'">
-            <startOffsets>
-              <option value="1279" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1310" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
